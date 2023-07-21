@@ -4,17 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rollup -c"
+    "dev": "rollup -c",
+    "build": "rollup -c --environment NODE_ENV:production"
   },
   "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.45.0",
+    "execa": "^7.1.1",
     "less": "^4.1.3",
     "postcss": "^8.4.26",
     "postcss-less": "^6.0.0",
-    "rollup-plugin-postcss": "^4.0.2"
+    "prettier": "^3.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "dependencies": {
     "rollup": "^3.26.3"
