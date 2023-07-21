@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="../../../dist/dev/tbToast/index.css">
+</head>
+<body>
+    <button id="btn">测试toast</button>
+    <script src="../../../dist/dev/tbToast/index.js"></script>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', function() {
+            tbToast({
+                content: '这是一个提示这是一个提示这是一个提示这是一个提示',
+                duration: 3000,
+                position: 'center',
+            });
+        });
+    </script>
+</body>
+</html>
