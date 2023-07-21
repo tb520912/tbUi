@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/tbPopup/index.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button id="btn">测试popup</button>
+    <div><p>测试标题</p></div>
+    <p id="text">测试内容</p>
+
+    <script type="text/javascript" src="./dist/tbPopup/index.js"></script>
+    <script>
+        const contentFragment = document.createDocumentFragment();
+        const box = document.createElement('div');
+        box.style.width = '100px';
+        box.style.height = '100px';
+        box.style.marginBottom = '10px';
+        box.style.backgroundColor = 'pink';
+        box.textContent = '测试内容';
+        contentFragment.appendChild(box);
+        const box1 = document.createElement('div');
+        box1.style.width = '100px';
+        box1.style.height = '100px';
+        box1.style.marginBottom = '10px';
+        box1.style.backgroundColor = 'red';
+        box1.textContent = '测试内容';
+        contentFragment.appendChild(box1);
+        const box2 = document.createElement('div');
+        box2.style.width = '100px';
+        box2.style.height = '100px';
+        box2.style.marginBottom = '10px';
+        box2.style.backgroundColor = 'yellow';
+        box2.textContent = '测试内容';
+        contentFragment.appendChild(box2);
+        const box3 = document.createElement('div');
+        box3.style.width = '100px';
+        box3.style.height = '100px';
+        box3.style.marginBottom = '10px';
+        box3.style.backgroundColor = 'blue';
+        box3.textContent = '测试内容';
+        contentFragment.appendChild(box3);
+        console.log(contentFragment);
+        var popup = new tbPopup({
+            title:{
+                text: '测试标题111',
+                textAlign: 'center',
+            },
+            content: contentFragment,
+            btns: [
+                {
+                    text: '确定1',
+                    callback: function() {
+                        console.log('确定');
+                    }
+                },
+                {
+                    text: '取消',
+                    callback: function() {
+                        console.log('取消');
+                    }
+                }
+            ]
+        });
+
+        document.getElementById('btn').onclick = () => {
+            popup.show();
+        }
+    </script>
+</body>
+</html>
