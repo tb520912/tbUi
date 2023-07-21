@@ -1,7 +1,8 @@
 @import url(../../assets/base.less);
+@import url(../../assets/common.less);
 .tb-popup {
     width: 100%;
-    background-color: var(@base-bg-color);
+    background-color: @base-bg-color;
     border-radius: 1.0667vw 1.0667vw 0 0;
     max-height: 70vh;
     flex-direction: column;
@@ -12,76 +13,76 @@
     z-index: 1000;
     bottom: -100%;
     left: 0;
-    transition: bottom var(@base-transition-time) ease;
+    transition: bottom @base-transition-time ease;
     .tb-popup-header {
         width: 100%;
         flex-shrink: 0;
-        padding: 0 var(@base-padding);
+        padding: 0 @base-padding;
         box-sizing: border-box;
-        border-bottom: var(@base-border);
+        border-bottom: @base-border;
         .tb-popup-title {
             position: relative;
             width: 100%;
             box-sizing: border-box;
             .tb-popup-title-text {
                 width: 100%;
-                line-height: var(@base-height);
-                font-size: var(@base-font-title-size);
-                color: var(@base-font-title-color);
-                font-weight: var(@base-font-weight);
+                line-height: @base-height;
+                font-size: @base-font-title-size;
+                color: @base-font-title-color;
+                font-weight: @base-font-weight;
                 display: inline-block;
                 max-width: 100%;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                height: var(@base-height);
+                height: @base-height;
             }
             .tb-popup-close {
                 position: absolute;
                 top: 50%;
                 right: 0;
                 transform: translateY(-50%);
-                width: var(@base-height);
-                height: var(@base-height);
-                line-height: var(@base-height);
+                width: @base-height;
+                height: @base-height;
+                line-height: @base-height;
                 text-align: center;
-                font-size: var(@base-font-size);
-                color: var(@base-font-color);
+                font-size: @base-font-size;
+                color: @base-font-color;
             }
             .tb-popup-left-btn {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: var(@base-height);
-                height: var(@base-height);
-                line-height: var(@base-height);
+                width: @base-height;
+                height: @base-height;
+                line-height: @base-height;
                 text-align: center;
-                font-size: var(@base-font-size);
-                color: var(@base-font-color);
+                font-size: @base-font-size;
+                color: @base-font-color;
             }
             .tb-popup-right-btn {
                 position: absolute;
                 top: 0;
                 right: 0;
-                width: var(@base-height);
-                height: var(@base-height);
-                line-height: var(@base-height);
+                width: @base-height;
+                height: @base-height;
+                line-height: @base-height;
                 text-align: center;
-                font-size: var(@base-font-size);
-                color: var(@base-color);
+                font-size: @base-font-size;
+                color: @base-color;
             }
         }
         .tb-popup-title-has-left-btn {
-            padding-left: var(@base-height);
+            padding-left: @base-height;
         }
         .tb-popup-title-has-right-btn {
-            padding-right: var(@base-height);
+            padding-right: @base-height;
         }
         .tb-popup-content {
-            padding: var(@base-padding);
+            padding: @base-padding;
             box-sizing: border-box;
-            font-size: var(@base-font-size);
-            color: var(@base-font-color);
+            font-size: @base-font-size;
+            color: @base-font-color;
             text-align: center;
             line-height: 1.5;
             flex: 1;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="../../../dist/dev/tbDialog/index.css">
+</head>
+<body>
+    
+    <button id="btn1">测试弹框</button>
+    <button id="btn2">测试弹框指定content</button>
+    <script src="../../../dist/dev/tbDialog/index.js"></script>
+    <script>
+        document.getElementById('btn1').onclick = () => {
+            console.log('点击了测试弹框');
+            new tbDialog({
+                title: '测试弹框',
+                content: '这是一个测试弹框',
+                confirmText: '确定',
+                cancelText: '取消',
+                showCancel: true,
+                showMask: true,
+                onConfirm: function () {
+                    console.log('点击了确定')
+                },
+                onCancel: function () {
+                    console.log('点击了取消')
+                }
+            })
+        }
+        document.querySelector('#btn2').onclick = function () {
+            const p = document.createElement('p')
+            p.innerHTML = '这是一个测试弹框'
+            p.style.color = 'red'
+            new tbDialog({
+                title: '测试弹框2',
+                content: p,
+                confirmText: '确定2',
+                cancelText: '取消2',
+                showCancel: true,
+                showMask: true,
+                onConfirm: function () {
+                    console.log('点击了确定')
+                },
+                onCancel: function () {
+                    console.log('点击了取消')
+                }
+            })
+        }
+    </script>
+</body>
+</html>

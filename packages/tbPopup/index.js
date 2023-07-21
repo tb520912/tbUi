@@ -1,5 +1,4 @@
 // 弹框组件
-import './index.less'
 // 接收配置项
 const defaultOptions = {
     title: {
@@ -20,6 +19,7 @@ const defaultOptions = {
         callback: null
     },
 }
+import './index.less'
 /**
  * {
  *   title: {

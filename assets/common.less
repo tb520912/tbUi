@@ -1,0 +1,12 @@
+@import url(./base.less);
+// 遮罩样式
+.tb-mask {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    left: 0;
+    bottom: -100vh;
+    z-index: 999;
+    transition: opacity @base-transition-time;
+}

@@ -1,0 +1,83 @@
+@import url(../../assets/base.less);
+@import url(../../assets/common.less);
+.tb-dialog {
+    z-index: 999;
+    position: fixed;
+    padding: @base-padding;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+    box-sizing: border-box;
+    width: 85%;
+    min-height: .4587vw;
+    background-color: @base-bg-color;
+    border-radius: 4.2667vw;
+    display: none;
+    transform-origin: 50% 50%;
+    transition: transform @base-transition-time linear, opacity @base-transition-time linear;
+    .tb-dialog-header {
+        position: relative;
+        font-size: @base-font-title-size;
+        color: @base-font-title-color;
+        font-weight: @base-font-weight;
+        border-bottom: @base-border;
+        height: @base-height;
+        line-height: @base-height;
+        text-align: center;
+        .tb-dialog-close {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: @base-height;
+            height: @base-height;
+            text-align: center;
+            line-height: @base-height;
+            font-size: @base-font-title-size;
+            color: @base-font-title-color;
+        }
+    }
+    .tb-dialog-content {
+        padding: @base-padding;
+        font-size: @base-font-size;
+        color: @base-font-color;
+        line-height: 1.5;
+        text-align: center;
+    }
+    .tb-dialog-footer {
+        padding: @base-padding;
+        border-top: @base-border;
+        width: 100%;
+        height: @base-height;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &>button {
+            margin-right: 10px;
+            flex: 1;
+            height: @base-height;
+            font-size: @base-font-size;
+            color: @base-font-color;
+            line-height: @base-height;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            border: none;
+            border-radius: @base-radius;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .tb-dialog-cancel {
+            color: @base-cancel-color;
+            background-color: @base-bg-cancel-color;
+        }
+        .tb-dialog-confirm {
+            background-color: @base-color;
+            color: @base-confirm-color;
+        }
+    }
+}
